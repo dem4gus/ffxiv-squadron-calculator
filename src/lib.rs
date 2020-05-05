@@ -10,46 +10,21 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
 pub fn calc_next_level_exp(level: u32) -> u32 {
-  let base_exp = match level {
-    1..=9 => 1_000,
-    10..=19 => 2_000,
-    20..=29 => 4_100,
-    30..=38 => 7200,
-    39..=44 => 11_000,
-    45..=50 => 18_000,
-    51..=54 => 46_500,
-    55..=59 => 66_000,
-    60 => 0,
+
+  let (base_exp, exp_growth, scale_factor) = match level {
+    1..=9 => (1_000, 100, level - 1),
+    10..=19 => (2_000, 200, level - 10),
+    20..=29 => (4_100, 300, level - 20),
+    30..=38 => (7200, 400, level - 30),
+    39..=44 => (11_000, 1_000, level - 39),
+    45..=50 => (18_000, 2_000, level - 45),
+    51..=54 => (46_500, 4_500, level - 51),
+    55..=59 => (66_000, 6_000, level - 55),
+    60 => (0, 0, 0),
     _ => panic!("Invalid level: {}", level),
   };
 
-  let exp_growth = match level {
-    1..=9 => 100,
-    10..=19 => 200,
-    20..=29 => 300,
-    30..=38 => 400,
-    39..=44 => 1_000,
-    45..=50 => 2_000,
-    51..=54 => 4_500,
-    55..=59 => 6_000,
-    60 => 0,
-    _ => panic!("Invalid level: {}", level),
-  };
-
-  let multiplier = match level {
-    1..=9 => level - 1,
-    10..=19 => level - 10,
-    20..=29 => level - 20,
-    30..=38 => level - 30,
-    39..=44 => level - 39,
-    45..=50 => level - 45,
-    51..=54 => level - 51,
-    55..=59 => level - 55,
-    60 => 0,
-    _ => panic!("Invalid level: {}", level),
-  };
-
-  base_exp + exp_growth * multiplier
+  base_exp + exp_growth * scale_factor
 }
 
 #[cfg(test)]
