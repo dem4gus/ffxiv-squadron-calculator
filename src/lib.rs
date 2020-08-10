@@ -10,7 +10,6 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
 pub fn calc_next_level_exp(level: u32) -> u32 {
-
   let (base_exp, exp_growth, scale_factor) = match level {
     1..=9 => (1_000, 100, level - 1),
     10..=19 => (2_000, 200, level - 10),
@@ -25,6 +24,16 @@ pub fn calc_next_level_exp(level: u32) -> u32 {
   };
 
   base_exp + exp_growth * scale_factor
+}
+
+fn calc_total_xp_for_level(level: u32) -> u32 {
+  let exp = match level {
+    0 | 1 => 0,
+    2..=60 => calc_next_level_exp(level - 1) + calc_total_xp_for_level(level - 1),
+    _ => panic!("Invalid level: {}", level),
+  };
+
+  exp
 }
 
 #[cfg(test)]
@@ -99,5 +108,30 @@ mod calc_next_level_exp {
   #[test]
   fn level_60() {
     assert_eq!(calc_next_level_exp(60), 0);
+  }
+}
+
+#[cfg(test)]
+mod calc_total_xp_for_level {
+  use super::*;
+
+  #[test]
+  fn level_1() {
+    assert_eq!(calc_total_xp_for_level(1), 0);
+  }
+
+  #[test]
+  fn level_10() {
+    assert_eq!(calc_total_xp_for_level(10), 12_600);
+  }
+
+  #[test]
+  fn level_30() {
+    assert_eq!(calc_total_xp_for_level(30), 96_100);
+  }
+
+  #[test]
+  fn level_60() {
+    assert_eq!(calc_total_xp_for_level(60), 997_300);
   }
 }
