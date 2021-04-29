@@ -38,8 +38,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["copy-webpack-plugin", "virtual:55891084325118e33c2ae8f93bdd78875751b97085fe57be64384911eb1c583c21958929daeb3a7dcc0aef109817bd859db7d14847805f4a45d0ab37c644a0b8#npm:5.1.2"],
-            ["ffxiv-squad-calc-wasm", "file:../pkg#../pkg::hash=4a639e&locator=create-wasm-app%40workspace%3A."],
-            ["typescript", "patch:typescript@npm%3A3.9.9#builtin<compat/typescript>::version=3.9.9&hash=a45b0e"],
+            ["ffxiv-squad-calc", "file:../pkg#../pkg::hash=c24511&locator=create-wasm-app%40workspace%3A."],
+            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"],
             ["webpack", "virtual:55891084325118e33c2ae8f93bdd78875751b97085fe57be64384911eb1c583c21958929daeb3a7dcc0aef109817bd859db7d14847805f4a45d0ab37c644a0b8#npm:4.46.0"],
             ["webpack-cli", "virtual:55891084325118e33c2ae8f93bdd78875751b97085fe57be64384911eb1c583c21958929daeb3a7dcc0aef109817bd859db7d14847805f4a45d0ab37c644a0b8#npm:3.3.12"],
             ["webpack-dev-server", "virtual:55891084325118e33c2ae8f93bdd78875751b97085fe57be64384911eb1c583c21958929daeb3a7dcc0aef109817bd859db7d14847805f4a45d0ab37c644a0b8#npm:3.11.2"]
@@ -1501,8 +1501,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["create-wasm-app", "workspace:."],
             ["copy-webpack-plugin", "virtual:55891084325118e33c2ae8f93bdd78875751b97085fe57be64384911eb1c583c21958929daeb3a7dcc0aef109817bd859db7d14847805f4a45d0ab37c644a0b8#npm:5.1.2"],
-            ["ffxiv-squad-calc-wasm", "file:../pkg#../pkg::hash=4a639e&locator=create-wasm-app%40workspace%3A."],
-            ["typescript", "patch:typescript@npm%3A3.9.9#builtin<compat/typescript>::version=3.9.9&hash=a45b0e"],
+            ["ffxiv-squad-calc", "file:../pkg#../pkg::hash=c24511&locator=create-wasm-app%40workspace%3A."],
+            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"],
             ["webpack", "virtual:55891084325118e33c2ae8f93bdd78875751b97085fe57be64384911eb1c583c21958929daeb3a7dcc0aef109817bd859db7d14847805f4a45d0ab37c644a0b8#npm:4.46.0"],
             ["webpack-cli", "virtual:55891084325118e33c2ae8f93bdd78875751b97085fe57be64384911eb1c583c21958929daeb3a7dcc0aef109817bd859db7d14847805f4a45d0ab37c644a0b8#npm:3.3.12"],
             ["webpack-dev-server", "virtual:55891084325118e33c2ae8f93bdd78875751b97085fe57be64384911eb1c583c21958929daeb3a7dcc0aef109817bd859db7d14847805f4a45d0ab37c644a0b8#npm:3.11.2"]
@@ -2212,11 +2212,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["ffxiv-squad-calc-wasm", [
-        ["file:../pkg#../pkg::hash=4a639e&locator=create-wasm-app%40workspace%3A.", {
-          "packageLocation": "./.yarn/cache/ffxiv-squad-calc-wasm-file-01216d011e-e38875bbef.zip/node_modules/ffxiv-squad-calc-wasm/",
+      ["ffxiv-squad-calc", [
+        ["file:../pkg#../pkg::hash=c24511&locator=create-wasm-app%40workspace%3A.", {
+          "packageLocation": "./.yarn/cache/ffxiv-squad-calc-file-2e5ce34e96-888bd184ac.zip/node_modules/ffxiv-squad-calc/",
           "packageDependencies": [
-            ["ffxiv-squad-calc-wasm", "file:../pkg#../pkg::hash=4a639e&locator=create-wasm-app%40workspace%3A."]
+            ["ffxiv-squad-calc", "file:../pkg#../pkg::hash=c24511&locator=create-wasm-app%40workspace%3A."]
           ],
           "linkType": "HARD",
         }]
@@ -5801,10 +5801,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["typescript", [
-        ["patch:typescript@npm%3A3.9.9#builtin<compat/typescript>::version=3.9.9&hash=a45b0e", {
-          "packageLocation": "./.yarn/cache/typescript-patch-92721659c3-05a113f2ec.zip/node_modules/typescript/",
+        ["patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e", {
+          "packageLocation": "./.yarn/cache/typescript-patch-70a7929abf-3be4431759.zip/node_modules/typescript/",
           "packageDependencies": [
-            ["typescript", "patch:typescript@npm%3A3.9.9#builtin<compat/typescript>::version=3.9.9&hash=a45b0e"]
+            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
           ],
           "linkType": "HARD",
         }]

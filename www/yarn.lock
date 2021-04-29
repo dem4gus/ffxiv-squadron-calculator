@@ -1261,8 +1261,8 @@ __metadata:
   resolution: "create-wasm-app@workspace:."
   dependencies:
     copy-webpack-plugin: ^5.0.0
-    ffxiv-squad-calc-wasm: "file:../pkg"
-    typescript: ^3.8.3
+    ffxiv-squad-calc: ../pkg
+    typescript: ^4.2.4
     webpack: ^4.29.3
     webpack-cli: ^3.1.0
     webpack-dev-server: ^3.1.5
@@ -1860,10 +1860,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ffxiv-squad-calc-wasm@file:../pkg::locator=create-wasm-app%40workspace%3A.":
+"ffxiv-squad-calc@file:../pkg::locator=create-wasm-app%40workspace%3A.":
   version: 0.1.0
-  resolution: "ffxiv-squad-calc-wasm@file:../pkg#../pkg::hash=4a639e&locator=create-wasm-app%40workspace%3A."
-  checksum: e38875bbefde4c382e0361d0021f36a4cfb600d74d453e242fe9b54dbd36b807739115c3a441bd5125dec78b75095a14ec0f57c259e15e86a4c1c0fb004ec32c
+  resolution: "ffxiv-squad-calc@file:../pkg#../pkg::hash=c24511&locator=create-wasm-app%40workspace%3A."
+  checksum: 888bd184ac1640b52f32b39e2304e8787a0dd377ede317976c4fbccb034cb4bb4e12897435c1c76351f46d1b944150ee673cb388a971faff3a3558456fe9d5b1
   languageName: node
   linkType: hard
 
@@ -5069,23 +5069,23 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-typescript@^3.8.3:
-  version: 3.9.9
-  resolution: "typescript@npm:3.9.9"
+typescript@^4.2.4:
+  version: 4.2.4
+  resolution: "typescript@npm:4.2.4"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 22bbe953faa34903587f3bd8fb6c343d754745d4177e49da523a2a3b814fe5eaf60d9b23c2d401d038a08a5ac2d8094b268ba75adee840cc2358fb5a866624ab
+  checksum: edaede2fa77f56b7fba80ee624a2368ab1216e75b0434d968ccb47ab0a5e2f6d94f848b3b111c1237dd71e988cd376af26370dcdad3b94355c76e759f0dd0a1e
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^3.8.3#builtin<compat/typescript>":
-  version: 3.9.9
-  resolution: "typescript@patch:typescript@npm%3A3.9.9#builtin<compat/typescript>::version=3.9.9&hash=a45b0e"
+"typescript@patch:typescript@^4.2.4#builtin<compat/typescript>":
+  version: 4.2.4
+  resolution: "typescript@patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 05a113f2ec0d0fc3263335c230d2eb7b94d851e51b5766f63b88b611127d08782ce41132eb32b9d3d434de8340f698f7ec2f72ebb4d33c3b2976b27de1f47ace
+  checksum: 3be44317593182e8ce494c114e7ad9b0bb2553a22f3085cc6da4f0a36912c20850daa9be4c898af2ab6fc8b12f430c1c9e46ac715721867cd38643f2350d3ef9
   languageName: node
   linkType: hard
 
