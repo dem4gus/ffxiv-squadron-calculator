@@ -100,28 +100,3 @@ mod calc_next_level_exp {
     assert_eq!(calc_next_level_exp(60), 0);
   }
 }
-
-#[cfg(test)]
-mod calc_total_xp_for_level {
-  use super::*;
-
-  #[test]
-  fn level_1() {
-    assert_eq!(calc_total_xp_for_level(1), 0);
-  }
-
-  #[test]
-  fn level_10() {
-    assert_eq!(calc_total_xp_for_level(10), 12_600);
-  }
-
-  #[test]
-  fn level_30() {
-    assert_eq!(calc_total_xp_for_level(30), 96_100);
-  }
-
-  #[test]
-  fn level_60() {
-    assert_eq!(calc_total_xp_for_level(60), 997_300);
-  }
-}
