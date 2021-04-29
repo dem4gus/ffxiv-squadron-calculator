@@ -7,4 +7,5 @@ RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get update && apt-get install -y nodejs --no-install-recommends
 RUN npm install -g yarn
 RUN yarn set version berry
+RUN  curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh 
 ENV DEBIAN_FRONTEND=interactive
