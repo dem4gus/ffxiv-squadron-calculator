@@ -26,16 +26,6 @@ pub fn calc_next_level_exp(level: u32) -> u32 {
   base_exp + exp_growth * scale_factor
 }
 
-fn calc_total_xp_for_level(level: u32) -> u32 {
-  let exp = match level {
-    0 | 1 => 0,
-    2..=60 => calc_next_level_exp(level - 1) + calc_total_xp_for_level(level - 1),
-    _ => panic!("Invalid level: {}", level),
-  };
-
-  exp
-}
-
 #[cfg(test)]
 mod calc_next_level_exp {
   use super::*;
