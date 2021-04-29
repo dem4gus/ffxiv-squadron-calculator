@@ -1,4 +1,4 @@
-import * as ffxiv from "ffxiv-squad-calc-wasm";
+import * as ffxiv from 'ffxiv-squad-calc';
 
 const currentLevel = document.getElementById('current-level');
 const expToNext = document.getElementById('exp-to-next');
